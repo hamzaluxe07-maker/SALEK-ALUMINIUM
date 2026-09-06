@@ -1,0 +1,75 @@
+/* Identité visuelle Salek Aluminium */
+body .logo-icon,
+body .footer-logo > span {
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--gold);
+  border-radius: 3px;
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  font: 500 27px/1 Oswald, sans-serif;
+  letter-spacing: -1px;
+  transform: none;
+  position: relative;
+}
+
+body .logo-icon::after,
+body .footer-logo > span::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+  top: -8px;
+  right: -8px;
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  box-shadow: 0 6px 20px #0004;
+  z-index: 5;
+}
+
+.whatsapp-button img { width: 31px; height: 31px; display: block; }
+.socials a img { width: 17px; height: 17px; display: block; }
+
+@media (max-width: 630px) {
+  body .logo-icon { width: 46px; height: 46px; font-size: 21px; }
+  body .footer-logo > span { width: 50px; height: 50px; font-size: 22px; }
+}
+
+/* Logo fourni par Salek Aluminium */
+.logo-image img { width: 70px; height: 70px; object-fit: cover; border-radius: 4px; }
+.footer-logo.logo-image img { width: 64px; height: 64px; object-fit: cover; border-radius: 4px; }
+.footer-logo.logo-image > span { display: block; width: auto; height: auto; border: 0; color: #fff; font: inherit; letter-spacing: inherit; position: static; }
+.footer-logo.logo-image > span::after { display: none; }
+.logo-image .logo-icon, .logo-image > span:first-child:not(:last-child) { display: none; }
+
+/* Animation de pergola : les lamelles s'ouvrent puis se ferment en boucle. */
+.banner { position: relative; overflow: hidden; background: linear-gradient(115deg, #171a1a, #6e624d 52%, #171a1a); }
+.banner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 65% 30%, #e2c16755, transparent 35%), linear-gradient(90deg, #0008, transparent 70%); }
+.banner-overlay { position: relative; z-index: 2; color: #fff; }
+.banner h1 { color: #fff; text-shadow: 0 3px 15px #0008; }
+.banner-overlay > span { display: inline-block; margin-top: 14px; color: #f6e9c6; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+.pergola { position: absolute; z-index: 1; width: min(760px, 68vw); height: 260px; right: 3%; top: 35px; perspective: 700px; transform: rotate(-7deg); }
+.pergola::before, .pergola::after { content: ""; position: absolute; background: #202626; box-shadow: 0 6px 12px #0008; }
+.pergola::before { left: 4%; right: 4%; height: 13px; top: 8px; }
+.pergola::after { width: 13px; height: 250px; left: 5%; top: 8px; }
+.pergola i { position: absolute; left: 8%; width: 86%; height: 17px; background: linear-gradient(90deg, #c8ccca, #646967 55%, #d4d7d3); transform-origin: 50% 0; animation: lames 5s ease-in-out infinite; box-shadow: 0 4px 7px #0007; }
+.pergola i:nth-child(1) { top: 22px; animation-delay: 0s; }.pergola i:nth-child(2) { top: 45px; animation-delay: .12s; }.pergola i:nth-child(3) { top: 68px; animation-delay: .24s; }.pergola i:nth-child(4) { top: 91px; animation-delay: .36s; }.pergola i:nth-child(5) { top: 114px; animation-delay: .48s; }.pergola i:nth-child(6) { top: 137px; animation-delay: .6s; }.pergola i:nth-child(7) { top: 160px; animation-delay: .72s; }.pergola i:nth-child(8) { top: 183px; animation-delay: .84s; }.pergola i:nth-child(9) { top: 206px; animation-delay: .96s; }
+@keyframes lames { 0%,100% { transform: rotateX(3deg); } 43%,57% { transform: rotateX(70deg); } }
+.service-card img { transition: transform .45s ease, filter .45s ease; }.service-card:hover img { transform: scale(1.12); filter: brightness(1.07); }
+@media (max-width: 630px) { .logo-image img { width: 54px; height: 54px; }.footer-logo.logo-image img { width: 54px; height: 54px; }.pergola { width: 110vw; right: -31vw; opacity: .65; }.banner-overlay { padding: 0 22px; } }
